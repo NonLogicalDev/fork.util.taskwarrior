@@ -70,7 +70,7 @@ std::string configurationDefaults =
   "# Use the command 'task show' to see all defaults and overrides\n"
   "\n"
   "# Files\n"
-  "data.location=~/.task\n"
+  "data.location=~/.taskwarrior/data.task\n"
   "locking=1                                      # Use file-level locking\n"
   "gc=1                                           # Garbage-collect data files - DO NOT CHANGE unless you are sure\n"
   "exit.on.missing.db=0                           # Whether to exit if ~/.task is not found\n"
@@ -1105,7 +1105,7 @@ void Context::createDefaultConfig ()
       throw std::string ("Cannot proceed without rc file.");
 
     // Override data.location in the defaults.
-    auto loc = configurationDefaults.find ("data.location=~/.task");
+    auto loc = configurationDefaults.find ("data.location=~/.taskwarrior/data.task");
     //                                 loc+0^          +14^   +21^
 
     Datetime now;

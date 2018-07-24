@@ -184,14 +184,12 @@ int CmdDiagnostics::execute (std::string& output)
       << '\n';
 
   char* env = getenv ("TASKRC");
-  if (env)
-    out << "     TASKRC: "
+  if (env) out << "     TASKRC: "
         << env
         << '\n';
 
   env = getenv ("TASKDATA");
-  if (env)
-    out << "   TASKDATA: "
+  if (env) out << "   TASKDATA: "
         << env
         << '\n';
 
