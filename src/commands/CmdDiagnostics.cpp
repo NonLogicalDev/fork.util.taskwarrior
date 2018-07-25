@@ -183,13 +183,13 @@ int CmdDiagnostics::execute (std::string& output)
       << location.mode ()
       << '\n';
 
-  char* env = getenv ("TASKRC");
-  if (env) out << "     TASKRC: "
+  char* env = getenv ("TASKWARRIORRC");
+  if (env) out << "     TASKWARRIORRC: "
         << env
         << '\n';
 
-  env = getenv ("TASKDATA");
-  if (env) out << "   TASKDATA: "
+  env = getenv ("TASKWARRIORDB");
+  if (env) out << "   TASKWARRIORDB: "
         << env
         << '\n';
 

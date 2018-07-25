@@ -449,7 +449,7 @@ int Context::initialize (int argc, const char** argv)
     // [1] Load the correct config file.
     //     - Default to ~/.taskrc (ctor).
     //     - Allow command line override rc:<file>
-    //     - Allow $TASKRC override.
+    //     - Allow $TASKWARRIORRC override.
     //     - Load resultant file.
     //     - Apply command line overrides to the config.
     //
@@ -457,11 +457,11 @@ int Context::initialize (int argc, const char** argv)
 
     CLI2::getOverride (argc, argv, home_dir, rc_file);
 
-    char* override = getenv ("TASKRC");
+    char* override = getenv ("TASKWARRIORRC");
     if (override)
     {
       rc_file = File (override);
-      header (format ("TASKRC override: {1}", rc_file._data));
+      header (format ("TASKWARRIORRC override: {1}", rc_file._data));
     }
 
     // Artificial scope for timing purposes.
@@ -479,7 +479,7 @@ int Context::initialize (int argc, const char** argv)
     // [2] Locate the data directory.
     //     - Default to ~/.task (ctor).
     //     - Allow command line override rc.data.location:<dir>
-    //     - Allow $TASKDATA override.
+    //     - Allow $TASKWARRIORDB override.
     //     - Inform TDB2 where to find data.
     //     - Create the rc_file and data_dir, if necessary.
     //
@@ -487,12 +487,12 @@ int Context::initialize (int argc, const char** argv)
 
     CLI2::getDataLocation (argc, argv, data_dir);
 
-    override = getenv ("TASKDATA");
+    override = getenv ("TASKWARRIORDB");
     if (override)
     {
       data_dir = Directory (override);
       config.set ("data.location", data_dir._data);
-      header (format ("TASKDATA override: {1}", data_dir._data));
+      header (format ("TASKWARRIORDB override: {1}", data_dir._data));
     }
 
     tdb2.set_location (data_dir);

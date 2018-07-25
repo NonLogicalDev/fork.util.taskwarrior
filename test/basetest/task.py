@@ -83,7 +83,7 @@ class Task(object):
         self.env = os.environ.copy()
 
         # Make sure no TASKDDATA is isolated
-        self.env["TASKDATA"] = self.datadir
+        self.env["TASKWARRIORDB"] = self.datadir
         # As well as TASKRC
         self.env["TASKRC"] = self.taskrc
 

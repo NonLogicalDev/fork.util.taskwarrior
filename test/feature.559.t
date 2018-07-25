@@ -42,13 +42,13 @@ class TestFeature559(TestCase):
 
         self.t.config("exit.on.missing.db", "1")
 
-        # NOTE the framework uses TASKDATA and TASKRC to tell taskwarrior where
+        # NOTE the framework uses TASKWARRIORDB and TASKRC to tell taskwarrior where
         # data is stored. Since these env variables take precedence over
         # command-line specified options, overriding rc.data.location has no
         # effect.
         # In order to test rc.exit.on.missing.db we must unset the env vars and
         # point taskwarrior to the configuration files via rc:override.
-        del self.t.env["TASKDATA"]
+        del self.t.env["TASKWARRIORDB"]
         del self.t.env["TASKRC"]
 
         # Inject rc:taskrc before any command used in this client

@@ -37,8 +37,8 @@ int main (int, char**)
   UnitTest t (19);
 
   // Ensure environment has no influence.
-  unsetenv ("TASKDATA");
-  unsetenv ("TASKRC");
+  unsetenv ("TASKWARRIORDB");
+  unsetenv ("TASKWARRIORRC");
 
   // TODO int confirm4 (const std::string&);
 

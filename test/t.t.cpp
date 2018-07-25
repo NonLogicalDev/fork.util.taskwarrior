@@ -35,8 +35,8 @@ int main (int, char**)
   UnitTest test (49);
 
   // Ensure environment has no influence.
-  unsetenv ("TASKDATA");
-  unsetenv ("TASKRC");
+  unsetenv ("TASKWARRIORDB");
+  unsetenv ("TASKWARRIORRC");
 
   test.is ((int)Task::textToStatus ("pending"),   (int)Task::pending,   "textToStatus pending");
   test.is ((int)Task::textToStatus ("completed"), (int)Task::completed, "textToStatus completed");

@@ -39,8 +39,8 @@ int main (int, char**)
   UnitTest t (12);
 
   // Ensure environment has no influence.
-  unsetenv ("TASKDATA");
-  unsetenv ("TASKRC");
+  unsetenv ("TASKWARRIORDB");
+  unsetenv ("TASKWARRIORRC");
 
   try
   {

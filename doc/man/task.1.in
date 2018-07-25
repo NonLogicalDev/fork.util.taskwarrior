@@ -1293,7 +1293,7 @@ specification of the .taskrc file.
 Specifies individual configuration file overrides.
 
 .TP
-.B TASKDATA=/tmp/.task task ...
+.B TASKWARRIORDB=/tmp/.task task ...
 The environment variable overrides the default, the command line, and
 the 'data.location' configuration setting of the task data directory.
 
@@ -1319,7 +1319,7 @@ overridden on the command line or by the TASKRC environment variable.
 ~/.task
 The default directory where task stores its data files. The location
 can be configured in the configuration variable 'data.location', or
-overridden with the TASKDATA environment variable..
+overridden with the TASKWARRIORDB environment variable..
 
 .TP
 ~/.task/pending.data

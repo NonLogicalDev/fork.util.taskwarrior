@@ -19,7 +19,7 @@ function setup_taskrc {
        fi
     done
 
-    export TASKDATA=.
+    export TASKWARRIORDB=.
 
     echo 'confirmation=off'               > taskrc
     echo 'color.debug=rgb025'             >> taskrc

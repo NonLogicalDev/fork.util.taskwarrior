@@ -36,8 +36,8 @@ int main (int, char**)
   UnitTest test (12);
 
   // Ensure environment has no influence.
-  unsetenv ("TASKDATA");
-  unsetenv ("TASKRC");
+  unsetenv ("TASKWARRIORDB");
+  unsetenv ("TASKWARRIORRC");
 
   ColumnID columnID;
   unsigned int minimum = 0;

@@ -157,7 +157,7 @@ reports and calendar.
 These environment variables override defaults and command line arguments.
 
 .TP
-.B TASKDATA=~/.task
+.B TASKWARRIORDB=~/.task
 This overrides the default path for the Taskwarrior data files.
 
 .TP
@@ -178,7 +178,7 @@ Note that you can use the
 .B ~
 shell meta character, which will be properly expanded.
 
-Note that the TASKDATA environment variable overrides this setting.
+Note that the TASKWARRIORDB environment variable overrides this setting.
 
 .TP
 .B hooks.location=$HOME/.task/hooks
@@ -207,7 +207,7 @@ is '1', but certain extensions and environments may need to disable hooks.
 .TP
 .B exit.on.missing.db=0
 When set to '1' causes the program to exit if the database (~/.task or
-rc.data.location or TASKDATA override) is missing. Default value is '0'.
+rc.data.location or TASKWARRIORDB override) is missing. Default value is '0'.
 
 .SS TERMINAL
 .TP

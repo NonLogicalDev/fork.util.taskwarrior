@@ -45,8 +45,8 @@ int main (int, char**)
   UnitTest t (1);
 
   // Ensure environment has no influence.
-  unsetenv ("TASKDATA");
-  unsetenv ("TASKRC");
+  unsetenv ("TASKWARRIORDB");
+  unsetenv ("TASKWARRIORRC");
 
   try
   {
